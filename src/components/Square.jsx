@@ -1,5 +1,5 @@
 import React from "react";
-import '../SquareStyle.css';
+// import './SquareStyle.css';
 
 
 const Square = ({ id, className, state }) => {
