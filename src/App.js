@@ -26,6 +26,7 @@ function App() {
 const restartGame = () => {
   setGameState(initialState);
   setSteps(0);
+  setWinner(null);
 };
 
 const checkForWinner = (gameState) => {
@@ -59,7 +60,7 @@ const checkForWinner = (gameState) => {
       <div className="button" onCLick={restartGame}> Start a New Game</div>
     </div>
 
-    {!winner && (<div className="right-wrapper">
+    {!winner && steps < 9 && (<div className="right-wrapper">
       <div className="players">
         <div className={`player ${steps %2 ===0 && "player-X"}`}>
           Player X
@@ -82,7 +83,7 @@ const checkForWinner = (gameState) => {
     </div>)}
     {winner && <div className="winner-wrapper">
       <img src={require('../src/winner.png')} alt='Winnerimage' width={120} height={100}/>
-      <div className="winner-text">{`${winner} Wins!!`}</div>
+      <div className="winner-text">{steps === 9 && !winner ? 'Its a draw!' : `${winner} Wins!!`} </div>
       </div>}
   </div>
   )

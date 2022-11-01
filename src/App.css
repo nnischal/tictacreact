@@ -85,3 +85,19 @@
   flex-wrap: wrap;
 }
 
+.winner-wrapper{
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winner-text{
+  font-size: 50px;
+  font-weight: bolder;
+  color: #4d6985;
+}
+
+img{
+  margin-left: 12px;
+}
