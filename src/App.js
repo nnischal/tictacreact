@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Square from './components/Square.jsx';
+import Square from './Square.jsx'
+
 
 
 const initialState = ["", "", "", "", "", "", "", "", "", ]
@@ -82,7 +83,7 @@ const checkForWinner = (gameState) => {
       </div>
     </div>)}
     {winner && <div className="winner-wrapper">
-      <img src={require('../src/winner.png')} alt='Winnerimage' width={120} height={100}/>
+      <img src={require('./img/winner.png')} alt='Winnerimage' width={120} height={100}/>
       <div className="winner-text">{steps === 9 && !winner ? 'Its a draw!' : `${winner} Wins!!`} </div>
       </div>}
   </div>
